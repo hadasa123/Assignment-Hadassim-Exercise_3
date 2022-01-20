@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1980">
+    <Grid Background="LightSeaGreen">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>           
+        </Grid.RowDefinitions>
+       
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="Bomb Game" FontSize="30" Foreground="Indigo"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="enter  rows:"/>
+                <TextBox x:Name="rows" Width="50" Height="30"/>
+                <TextBlock Text="enter  col:"/>
+                <TextBox x:Name="cols" Width="50" Height="30"/>
+                <Button  Content="Go!" Width="100" Height="20" Click="StartGame"/>
+            </StackPanel>
+            
+        </StackPanel>
+        <Grid Name="g" Grid.Row="1  ">
+            
+        </Grid>
+       
+    </Grid>
+</Window>
